@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     d3.select("#cage").on("click", function (d) {
         const clength = chosen.length
-        while (clength == chosen.length) {
+        while (clength<75 && clength == chosen.length) {
             l = Math.floor(Math.random() * 5)
             ind = Math.floor(Math.random() * 15)
             letter = letters[l]
