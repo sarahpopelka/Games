@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             circle=d3.select(this).select("circle")
             if (circle.style("fill")=="none"){
                 circle
-                .attr("fill", "aquamarine")
+                .attr("fill", "#99FFFF")
                 .attr("stroke", "aqua" )
             }
             else{
