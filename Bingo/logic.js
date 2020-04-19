@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             if (circle.style("fill")=="none"){
                 circle
                 .attr("fill", "#99FFFF")
-                .attr("stroke", "aqua" )
+                .attr("stroke", "#00FFFF" )
             }
             else{
                 circle
