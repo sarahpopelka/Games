@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             .data(letters)
             .enter()
             .append("th")
+            .style("font-family","'Fredoka One', cursive")
             .text(function (d) { return d })
         table.append("tbody")
             .selectAll("tr")
