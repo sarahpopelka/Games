@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    var modal = document.getElementById("introModal");
+
+    modal.style.display="inherit";
+    
+    var span = document.getElementsByClassName("close")[0];
+
+    var cont = document.getElementsByClassName("continue")[0];
+    
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    cont.onclick = function() {
+        modal.style.display = "none";
+      }
+    
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
     const choices = {
         'B': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
         'I': [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],

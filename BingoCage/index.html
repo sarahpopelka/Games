@@ -6,6 +6,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="./logic.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
     <style>
         td {
             border: 1px solid black;
@@ -19,40 +20,81 @@
         .BINGO {
             text-align: center;
             font-family: 'Fredoka One', cursive;
-            font-weight:bold;
+            font-weight: bold;
             font-size: 30pt;
             background-color: #99FFFF;
         }
 
-        table {
-            border: 10px solid #99FFFF;
+        div.infotip span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #99FFFF;
         }
 
-        .small {
-            font: 30pt sans-serif;
+        div.infotip:hover span {
+            display: inline-block;
+            border-radius: 25px;
+            width: 180px;
+            font-size: 12pt;
+            color:black
         }
     </style>
 </head>
 
 <body>
     <!-- <div style="padding:50px"><h3 style="text-align:center">Bingo Card</h1></div> -->
+    <nav class="navbar ">
+        <a class="navbar-brand" href="https://sarahpopelka.github.io" style="color:#ffffff;font-weight:bold;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Sine_Wave_%28PSF%29.png" width="30"
+                height="30" class="d-inline-block align-top" alt="">
+            Sarah Popelka
+        </a>
+    </nav>
     <br>
+
+    <div id="introModal" class="modal">
+
+        <div class="modal-content">
+            <div style="text-align:right"><span class="close">&times;</span></div>
+            <div style="text-align:center">
+                <p>This is a virtual bingo cage.</p>
+                <p>To play, click on the cage icon to call a number. The history of called numbers is tracked in the
+                    master board below the cage. </p>
+                <br>
+                <a href="https://sarahpopelka.github.io/Games/BingoCage"><button class="btn btn-info">Bingo
+                        Cage</button></a>
+                <button class="btn btn-info continue">Let's play!</button>
+            </div>
+        </div>
+
+    </div>
     <br>
     <div class="row">
         <div class="col-4"></div>
         <div class="col-2">
-            <img id="cage" src="./cage.jpeg" width="120" height="100"></div>
+            <a href="#" onclick="return false;">
+                <div class="infotip">
+                    <span> 🛈 Click to call a number</span>
+                    <img id="cage" src="./cage.jpeg" width="120" height="100">
+                </div>
+            </a>
+        </div>
         <div class="col-2"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
                 <circle stroke="#00FFFF" stroke-width="5px" fill="#99FFFF" cx="50" cy="50" r="48" />
-            <text id="ball" x="15" y="65" class="BINGO"></text>
-            </svg></div>
+                <text id="ball" x="15" y="65" class="BINGO"></text>
+            </svg></div></a>
         <div class="col-4"></div>
     </div>
     <br><br>
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-11"><table>
-        </table></div>
+        <div class="col-11">
+            <table>
+            </table>
+        </div>
     </div>
 </body>
 

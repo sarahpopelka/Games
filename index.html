@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #47bcc9;
+        }
+
+        .card:hover .image {
+            opacity: 0.3;
+        }
+
+        .card:hover .overlay {
+            opacity: 1;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #47bcc9;
+        }
+    </style>
+    <title>Sarah Popelka</title>
+</head>
+
+<body style="background-color:#d9f7fa">
+    <!-- Image and text -->
+    <nav class="navbar ">
+        <a class="navbar-brand" href="https://sarahpopelka.github.io" style="color:#ffffff;font-weight:bold;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Sine_Wave_%28PSF%29.png" width="30"
+                height="30" class="d-inline-block align-top" alt="">
+            Sarah Popelka
+        </a>
+    </nav>
+    <div class="container">
+        <div class="row"><br><br></div>
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <a href="https://sarahpopelka.github.io/Games">
+                        <img class="card-img image" src="assets/bingo.png" alt="Bingo">
+                        <div class="overlay">
+                            <div class="text">Games</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card h-100">
+                    <a href="https://sarahpopelka.github.io/projects.html">
+                        <img class="card-img image" src="assets/bingocage.jpg" alt="Bingo">
+                        <div class="overlay">
+                            <div class="text">Projects</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-2">
+            </div>
+        </div>
+        <div class="row"><br><br></div>
+    </div>
+</body>
+
+</html>
